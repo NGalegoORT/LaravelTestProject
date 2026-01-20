@@ -1,53 +1,35 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return "Hola mundo!";
-    //return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
-
-//CREACION DE CRUD
-
+//------------------------CREACION DE CRUD------------------------------
 //Ruta para mostrar el listado de registros
-Route::get('/posts', function(){
-    return "Listado de posts";
-});
+Route::get('/posts', [PostController::class, 'index']);
 
 //Ruta para mostrar un formulario de creacion
-Route::get('/posts/create', function(){
-    return "Formulario de creacion de un post";
-});
+Route::get('/posts/create', [PostController::class, 'create']);
+
 
 //Ruta para guardar el nuevo registro
-Route::post('/posts', function(){
-    return "Guardar el nuevo post";
-});
+Route::post('/posts', [PostController::class, 'store']);
 
 //Ruta para mostrar un registro en particular
-Route::get('/posts/{post}', function($post){
-    return "Mostrando el post de: $post";
-});
+Route::get('/posts/{post}', [PostController::class, 'show']);
 
 //Ruta para mostrar el formulario de edicion
-Route::get('/posts/{post}/edit', function($post){
-    return "Formulario de edicion del post: $post";
-});
+Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
 
 //Ruta para actualizar el registro
-Route::put('/posts/{post}', function($post){
-    return "Actualizar el post: $post";
-});
+Route::put('/posts/{post}', [PostController::class, 'update']);
 
 //Ruta para eliminar un registro
-Route::delete('/posts/{post}', function($post){
-    return "Eliminar el post: $post";   
-});
+Route::delete('/posts/{post}', [PostController::class, 'destroy']);
 
 //-------------------------------FIN CRUD-------------------------------------
-
-
 
 
 
