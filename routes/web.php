@@ -6,7 +6,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
+
 //------------------------CREACION DE CRUD------------------------------
+
+Route::resource('posts', PostController::class)->names('posts');
+
+/*
 //Ruta para mostrar el listado de registros
 Route::get('/posts', [PostController::class, 'index'])
 ->name('posts.index');
@@ -23,6 +28,7 @@ Route::post('/posts', [PostController::class, 'store'])
 //Ruta para mostrar un registro en particular
 Route::get('/posts/{post}', [PostController::class, 'show'])
 ->name('posts.show');   
+
 //Ruta para mostrar el formulario de edicion
 Route::get('/posts/{post}/edit', [PostController::class, 'edit'])
 ->name('posts.edit');
@@ -34,9 +40,8 @@ Route::put('/posts/{post}', [PostController::class, 'update'])
 //Ruta para eliminar un registro
 Route::delete('/posts/{post}', [PostController::class, 'destroy'])
 ->name('posts.destroy');
-
+*/
 //-------------------------------FIN CRUD-------------------------------------
-
 
 
 /* COMO DEFINIMOS LAS RUTAS, LAS VALIDAMOS Y LAS NOMBRAMOS
