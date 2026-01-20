@@ -8,26 +8,32 @@ Route::get('/', [HomeController::class, 'index']);
 
 //------------------------CREACION DE CRUD------------------------------
 //Ruta para mostrar el listado de registros
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index'])
+->name('posts.index');
 
 //Ruta para mostrar un formulario de creacion
-Route::get('/posts/create', [PostController::class, 'create']);
+Route::get('/posts/create', [PostController::class, 'create'])
+->name('posts.create');
 
 
 //Ruta para guardar el nuevo registro
-Route::post('/posts', [PostController::class, 'store']);
+Route::post('/posts', [PostController::class, 'store'])
+->name('posts.store');
 
 //Ruta para mostrar un registro en particular
-Route::get('/posts/{post}', [PostController::class, 'show']);
-
+Route::get('/posts/{post}', [PostController::class, 'show'])
+->name('posts.show');   
 //Ruta para mostrar el formulario de edicion
-Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
+Route::get('/posts/{post}/edit', [PostController::class, 'edit'])
+->name('posts.edit');
 
 //Ruta para actualizar el registro
-Route::put('/posts/{post}', [PostController::class, 'update']);
+Route::put('/posts/{post}', [PostController::class, 'update'])
+->name('posts.update');
 
 //Ruta para eliminar un registro
-Route::delete('/posts/{post}', [PostController::class, 'destroy']);
+Route::delete('/posts/{post}', [PostController::class, 'destroy'])
+->name('posts.destroy');
 
 //-------------------------------FIN CRUD-------------------------------------
 
