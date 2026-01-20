@@ -9,7 +9,20 @@ Route::get('/', HomeController::class);
 
 //------------------------CREACION DE CRUD------------------------------
 
+/*Reducir todas las rutas referentes al CRUD de posts a una sola linea
 Route::resource('posts', PostController::class)->names('posts');
+*/
+
+//Agrupar todas las rutas bajo un prefijo común
+Route::prefix('posts')->controller(PostController::class)->group(function () {
+    Route::get('/', 'index')->name('posts.index');
+    Route::get('/create', 'create')->name('posts.create');
+    Route::post('/', 'store')->name('posts.store');
+    Route::get('/{post}', 'show')->name('posts.show');
+    Route::get('/{post}/edit', 'edit')->name('posts.edit');
+    Route::put('/{post}', 'update')->name('posts.update');
+    Route::delete('/{post}', 'destroy')->name('posts.destroy');
+});
 
 /*
 //Ruta para mostrar el listado de registros
