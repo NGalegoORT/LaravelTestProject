@@ -8,7 +8,8 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('posts.index');
+        $etiqueta = '<p>Esta etiqueta es: Tecnologia</p>';
+        return view('posts.index', compact('etiqueta'));
     }
 
     public function create()
