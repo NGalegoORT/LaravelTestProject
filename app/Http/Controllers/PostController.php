@@ -23,8 +23,8 @@ class PostController extends Controller
 
     public function show($post)
     {
-        $prueba = "Valor de prueba";
-        return view('posts.show', compact('post', 'prueba'));
+        //$prueba = "Valor de prueba";
+        return view('posts.show', compact('post'));
         /*
         //Esto se usa para cuando queres renombrar la variable en la vista
         return view('posts.show', [
