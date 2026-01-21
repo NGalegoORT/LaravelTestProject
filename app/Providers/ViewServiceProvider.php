@@ -3,12 +3,11 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Route;
-
-class AppServiceProvider extends ServiceProvider
+use Illuminate\Support\Facades\View;
+class ViewServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Register services.
      */
     public function register(): void
     {
@@ -16,11 +15,10 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap any application services.
+     * Bootstrap services.
      */
     public function boot(): void
     {
-        Route::pattern('id', '[0-9]+');
-
+        View::share('prueba', 'Este es un mensaje de prueba');
     }
 }
