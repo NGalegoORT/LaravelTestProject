@@ -9,28 +9,43 @@
 <body>
     <h1>Aqui se mostrara el LISTADO de POSTS</h1>
 
+
+    <!--Directivas Enviroments en blade LVL -->
+    <!-- De esta forma se puede saber en que entorno estamos trabajando
+         y mostrar contenido segun el entorno en el que estemos
+        @env('local')
+            <p>Estas en entorno LOCAL</p>
+        @endenv
+
+        @env('production')
+            <p>Estas en entorno PRODUCTION</p>
+        @endenv
+    -->
+
+
+
     <!-- IF en blade LVL -->
         @if(true)
             <p>La condicion es verdadera</p>
         @else
             <p>La condicion es falsa</p>
         @endif
-
-    <!-- UNLESS en blade LVL -->
+    
+    <!-- UNLESS en blade LVL 
         @unless(false)
             <p>La condicion es falsa</p>
         @endunless
-
-    <!-- ISSET en blade LVL -->
+    -->
+    <!-- ISSET en blade LVL 
         @isset($prueba)
             <p>La variable {{$prueba}} existe y tiene valor asignado</p>
         @endisset
-
-    <!-- EMPTY en blade LVL -->
+    -->
+    <!-- EMPTY en blade LVL 
         @empty($prueba)
             <p>No hay posts disponibles</p>
         @endempty
-        
+        -->
 
      <script>
         //let posts = @json($posts);
