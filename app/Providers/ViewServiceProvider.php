@@ -20,7 +20,7 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('prueba', 'Este es un mensaje de prueba');
+        View::share('prueba', 'TestVar');
         
         View::composer(['welcome', 'posts.show'], CompanyComposer::class);
 
