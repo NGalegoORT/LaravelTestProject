@@ -9,6 +9,6 @@
 <body>
     <h1>WELCOME VIEW</h1>
     <p>Esta es la vista de bienvenida</p>
-    <p><?php echo $prueba2; ?></p>
+    {!! $prueba2 !!}
 </body>
 </html>

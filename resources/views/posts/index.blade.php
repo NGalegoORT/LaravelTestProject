@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Aqui se mostrara el LISTADO de POSTS</h1>
-     {!! $etiqueta !!}
+     <script>
+
+    </script>
+    @{{$etiqueta}}
 </body>
 </html>

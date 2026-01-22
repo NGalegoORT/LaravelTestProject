@@ -8,8 +8,20 @@ class PostController extends Controller
 {
     public function index()
     {
+        $posts = [[
+            'title' => 'Primer post',
+            'content' => 'Contenido del primer post',
+        ],[
+            'title' => 'Segundo post',
+            'content' => 'Contenido del segundo post',
+        ],[
+            'title' => 'Tercer post',
+            'content' => 'Contenido del tercer post',
+        ]];
+
+
         $etiqueta = '<p>Esta etiqueta es: Tecnologia</p>';
-        return view('posts.index', compact('etiqueta'));
+        return view('posts.index', compact('posts', 'etiqueta'));
     }
 
     public function create()
