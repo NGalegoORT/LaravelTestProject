@@ -9,8 +9,8 @@
 <body>
     <h1>Aqui se mostrara el LISTADO de POSTS</h1>
      <script>
-
+        let posts = @json($posts);
+        console.log(posts);
     </script>
-    @{{$etiqueta}}
 </body>
 </html>

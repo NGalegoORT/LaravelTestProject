@@ -20,8 +20,8 @@ class PostController extends Controller
         ]];
 
 
-        $etiqueta = '<p>Esta etiqueta es: Tecnologia</p>';
-        return view('posts.index', compact('posts', 'etiqueta'));
+        //$etiqueta = '<p>Esta etiqueta es: Tecnologia</p>';
+        return view('posts.index', compact('posts'));
     }
 
     public function create()
