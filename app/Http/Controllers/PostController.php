@@ -19,9 +19,10 @@ class PostController extends Controller
             'content' => 'Contenido del tercer post',
         ]];
 
+        $dia = 14;
 
         //$etiqueta = '<p>Esta etiqueta es: Tecnologia</p>';
-        return view('posts.index', compact('posts'));
+        return view('posts.index', compact('posts', 'dia'));
     }
 
     public function create()

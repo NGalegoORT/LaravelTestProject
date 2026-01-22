@@ -9,6 +9,27 @@
 <body>
     <h1>Aqui se mostrara el LISTADO de POSTS</h1>
 
+    <!--SWITCH en blade LVL -->
+        @switch($dia)
+            @case(1)
+                <p>Hoy es Lunes</p>
+                @break
+            @case(2)
+                <p>Hoy es Martes</p>
+                @break
+            @case(3)
+                <p>Hoy es Miercoles</p>
+                @break
+            @case(4)
+                <p>Hoy es Jueves</p>
+                @break
+            @case(5)
+                <p>Hoy es Viernes</p>
+                @break
+            @default
+                <p>Fin de semana!!!</p>
+        @endswitch
+
 
     <!--Directivas Enviroments en blade LVL -->
     <!-- De esta forma se puede saber en que entorno estamos trabajando
